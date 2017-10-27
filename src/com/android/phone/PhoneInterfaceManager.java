@@ -120,9 +120,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import static com.android.internal.telephony.PhoneConstants.SUBSCRIPTION_KEY;
-import com.android.internal.telephony.RILConstants;
-
 /**
  * Implementation of the ITelephony interface.
  */
@@ -1181,6 +1178,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
         switch (network) {
         // GSM Devices
         case Phone.NT_MODE_WCDMA_PREF:
+        case Phone.NT_MODE_WCDMA_ONLY:
         case Phone.NT_MODE_GSM_UMTS:
         case Phone.NT_MODE_GSM_ONLY:
             //push old network to useless Settings.Global.PREFERRED_NETWORK_MODE
